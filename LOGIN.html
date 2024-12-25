@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>OwlSight | Telescope</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A onepage portfolio HTML template by Unslate.co">
+    <meta name="keywords" content="html, css, javascript, jquery">
+    <meta name="author" content="Unslate.co">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.8.1/nipplejs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.1.0/nouislider.min.css" />
+
+    <!-- Theme Style -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/shin.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.8.1/nipplejs.min.js" defer></script>
+
+    <style>
+        .slider-wrapper {
+            display: flex;
+            align-items: center; /* Đưa label và input lên cùng 1 hàng */
+            margin-bottom: 20px; /* Khoảng cách giữa các nhóm form */
+        }
+
+        .label {
+            font-size: 18px;
+            font-weight: bold;
+            width: 150px; /* Thiết lập chiều rộng cố định cho label */
+            margin-right: 10px; /* Khoảng cách giữa label và input */
+            flex-shrink: 0; /* Giữ cố định khoảng cách */
+        }
+        .slider-container {
+            width: 400px;
+            margin: 20px auto;
+        }
+        .input {
+            flex-grow: 1; /* Tăng không gian cho input */
+            padding: 10px; /* Khoảng cách padding bên trong */
+            border: 1px solid #ccc; /* Viền input */
+            border-radius: 5px; /* Bo tròn góc */
+            font-size: 16px;
+            color: #333; /* Màu chữ mặc định */
+        }
+
+        .input:focus {
+            border-color: #007BFF; /* Thay đổi viền khi focus */
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Tạo hiệu ứng bóng khi focus */
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .slider {
+            flex-grow: 1;
+        }
+        .marks {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-top: -10px;
+            padding-left: 60px; 
+        }
+        
+        .message-box {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px; 
+            padding: 15px;
+            border: 2px solid #333; 
+            border-radius: 10px;
+            background-color: #f0f0f0; 
+            color: #333; 
+            width: 80%; 
+            margin: 20px auto; 
+            display: none; /* Hide initially */
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <nav class="unslate_co--site-mobile-menu">
+        <div class="close-wrap d-flex">
+            <a href="#" class="d-flex ml-auto js-menu-toggle">
+                <span class="close-label">Close</span>
+                <div class="close-times">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                </div>
+            </a>
+        </div>
+        <div class="site-mobile-inner"></div>
+    </nav>
+
+    <div class="unslate_co--site-wrap">
+        <div class="unslate_co--site-inner">
+            <nav class="unslate_co--site-nav site-nav-target">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between text-left">
+                        <div class="col-3">
+                            <div class="site-logo">
+                                <a href="index-sidebar-menu.html" class="unslate_co--site-logo">Log In<span></span></a>
+                            </div>
+                        </div>
+                        <div class="col text-right">
+                            <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                                <li>
+                                    <a href="https://haubg02.github.io/OwlSight/">
+                                        <img src="images/home1.jpg" alt="Image" width="45" style="vertical-align: middle; margin-right: 10px;">
+                                        Home
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
+                                <li>
+                                    <a href="#" class="js-menu-toggle">
+                                        <img src="images/control.jpg" alt="Menu Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+                                        Menu
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="cover-v1 jarallax overlay" style="background-image: url('images/cover_bg_1.jpg');" id="home-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 text-left">
+                            <div class="slider-container">
+                                <h1 class="title">LogIn</h1>
+                                <div class="login-container">
+                                    <form id="loginForm">
+                                        <div class="slider-wrapper">
+                                            <label class="label" for="username">Username:</label>
+                                            <input type="text" id="username" placeholder="Enter your username" required>
+                                        </div>
+                                        <div class="slider-wrapper">
+                                            <label class="label" for="password">Password:</label>
+                                            <input type="password" id="password" placeholder="Enter your password" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                    </form>
+                                    <div id="error" class="message-box error">Invalid username or password!</div>
+                                    <div id="success" class="message-box success">Login successful!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const loginForm = document.getElementById('loginForm');
+                const usernameInput = document.getElementById('username');
+                const passwordInput = document.getElementById('password');
+                const errorMessage = document.getElementById('error');
+                const successMessage = document.getElementById('success');
+
+                loginForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const username = usernameInput.value.trim();
+                    const password = passwordInput.value.trim();
+
+                    if (username === 'haubg02' && password === 'adumakja117') {
+                        // Hide error message if login is successful
+                        errorMessage.style.display = 'none';
+                        
+                        // Show success message
+                        successMessage.style.display = 'block';
+                        
+                        // Redirect after 2 seconds
+                        setTimeout(function() {
+                            window.location.href = 'index.html'; // Redirect to another page
+                        }, 2000);
+                    } else {
+                        // Show error message if login fails
+                        errorMessage.style.display = 'block';
+                    }
+                });
+            });
+
+            </script>     
+            
+            <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+                <span class="mouse">
+                    <span class="scroll"></span>
+                </span>
+                <span class="mouse-label">Scroll</span>
+            </a>
+        </div>
+
+        <footer class="unslate_co--footer unslate_co--section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <div class="footer-site-logo"><a href="index.html">OwlSight<span></span></a></div>
+                        <ul class="footer-site-social">
+                            <li><a href="https://www.facebook.com/vansinh.tong.560">Facebook</a></li>
+                            <li><a href="https://x.com/">Twitter</a></li>
+                            <li><a href="https://www.instagram.com/hauc02/">Instagram</a></li>
+                            <li><a href="https://dribbble.com/">Dribbble</a></li>
+                            <li><a href="https://www.behance.net/">Behance</a></li>
+                        </ul>
+                        <p class="site-copyright">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://www.facebook.com/vansinh.tong.560" target="_blank">OwlSight</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loader -->
+    <div id="unslate_co--overlayer"></div>
+    <div class="site-loader-wrap">
+        <div class="site-loader dark"></div>
+    </div>
+
+    <script src="js/scripts-dist.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <!-- Global site tag (gtag) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157808202"></script>
+</body>
+</html>
